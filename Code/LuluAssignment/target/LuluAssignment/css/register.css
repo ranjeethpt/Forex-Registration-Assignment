@@ -1,0 +1,22 @@
+html,body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+label[for="mandatory"] {
+    color: red;
+  }
+.required
+{
+	color: red;
+}
+
+.errorMessage{
+	text-align: left;
+	color: red;
+}

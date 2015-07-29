@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="LuLuMysqlDS">
+			<transactionManager type="com.assignment.lulu.dao.CustomizedManagedTransactionFactory" />
+			<dataSource type="JNDI">
+				<!-- For JBOSS -->
+				<!-- <property name="data_source" value="java:/WIMSDS" /> -->
+				<!-- For Tomcat 	 -->
+				<property name="data_source" value="java:/comp/env/jdbc/luluDB"/> 
+				
+				<!-- For Websphere -->
+				<!-- <property name="data_source" value="WIMSDS" /> -->
+			</dataSource>
+		</environment>
+		
+		<environment id="development">
+          <transactionManager type="com.assignment.lulu.dao.CustomizedManagedTransactionFactory" />
+            <!--  connecting to Local MySql -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/luludb"/>
+                <property name="username" value="root"/>
+                <property name="password" value="asdfgh"/>
+            </dataSource>
+       </environment>
+	</environments>
+	<mappers>
+		<mapper resource="Register-Mapper.xml" />
+	</mappers>
+</configuration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition name="basic.layout" template="/jsp/Layout/Layout.jsp">
+         <put-attribute name="mainarea" value=""/>
+    </definition>
+    <definition name="/Register.tiles" extends="basic.layout">
+    	 <put-attribute name="mainarea" value="/jsp/CustRegister/registerTiles.jsp"/>
+    </definition>
+    <definition name="/View.tiles" extends="basic.layout">
+    	 <put-attribute name="mainarea" value="/jsp/CustRegister/viewTiles.jsp"/>
+    </definition>
+ </tiles-definitions>

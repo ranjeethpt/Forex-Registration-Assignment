@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="RegisterMapper">
+  <!-- Result Map for EmailVO -->
+     <resultMap id="EmailVOMap"  type="com.assignment.lulu.register.model.EmailVO">
+		<result property="username" column="USERNAME" />
+		<result property="password" column="PASSWORD" />
+		<result property="emailFrom" column="EMAIL_FROM" />
+		<result property="host" column="HOST" />
+		<result property="port" column="PORT" />
+	 </resultMap>
+	 
+	 <!-- This is used to get the user Id sequence -->
+	<select id="checkEmailCount" resultType="Integer" parameterType="String">
+		select count(email) from customer_data_lulu where email = #{emailID}
+	</select>
+	 
+	 <insert id="insertCusterData"	parameterType="com.assignment.lulu.register.model.CustomerModel">
+		INSERT INTO CUSTOMER_DATA_LULU(
+				<!-- CUSTOMER_ID, -->
+				 CUST_NAME, ADDRESS, EMAIL, 
+				COUNTRY, PHONE, DATE_OF_BIRTH,USER_PWD)
+		VALUES	(	
+					<!-- #{id,javaType=int,jdbcType=NUMERIC}, -->	
+					#{custName,javaType=String,jdbcType=VARCHAR},
+					#{address,javaType=String,jdbcType=VARCHAR},
+					#{email,javaType=String,jdbcType=VARCHAR},					
+					#{country,javaType=String,jdbcType=VARCHAR},
+					#{phone,javaType=String,jdbcType=VARCHAR},
+					#{dobDate,javaType=Date,jdbcType=DATE}, 
+					#{passwordCrypt,javaType=String,jdbcType=VARCHAR}
+					)
+     </insert>
+      
+      <select id="getEmailDetails" resultMap="EmailVOMap">
+      	SELECT * FROM EMAIL_MASTER_LULU 
+      </select>
+      
+</mapper>

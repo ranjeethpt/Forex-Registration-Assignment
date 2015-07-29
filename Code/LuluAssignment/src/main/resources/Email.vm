@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	
+	</head>
+
+	<body style="font-family:arial;font-size:15px;">
+	
+
+ <center>
+
+  <h2>$customerData.email registered successfully</h2>	
+  <table>
+   <tr>
+    <td>Customer Name:</td>
+    <td>$customerData.custName
+    </td>
+   </tr>
+   <tr>
+    <td>Address</td>
+    <td>$customerData.address
+    </td>
+   </tr>
+   <tr>
+    <td>Email:</td>
+    <td>$customerData.email
+    </td>
+   </tr>
+    <tr>
+    <td>country:</td>
+    <td>$customerData.country
+    </td>
+   </tr> 
+   <tr>
+    <td>Phone:</td>
+    <td>$customerData.phone
+    </td>
+   </tr>
+   <tr>
+    <td>dateOfBirth:</td>
+    <td>$customerData.dateOfBirth
+    </td>
+   </tr>
+  </table>
+ </center>
+	</body>
+</html>
+
+

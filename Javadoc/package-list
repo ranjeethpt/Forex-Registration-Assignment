@@ -1,0 +1,10 @@
+com.assignment.lulu.constant
+com.assignment.lulu.dao
+com.assignment.lulu.register.action
+com.assignment.lulu.register.dao
+com.assignment.lulu.register.exception
+com.assignment.lulu.register.log
+com.assignment.lulu.register.model
+com.assignment.lulu.register.service
+com.assignment.lulu.register.test.util
+com.assignment.lulu.register.util
