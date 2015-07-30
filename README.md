@@ -4,6 +4,14 @@ Script : Mysql db script<br/>
 Javadoc : Javadoc of all code modules.<br/>
 Warfile : Compiled war file which is ready for deployment.<br/><br/>
 
+Technology:<br/>
+Struts 2<br/>
+iBatis<br/>
+jUnit<br/>
+maven<br/>
+jsp<br/>
+jquery<br/>
+
 Development Env used are:<br/>
 OS - Mac<br/>
 IDE - Eclipse Luna<br/>
